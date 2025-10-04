@@ -5,7 +5,7 @@ import os
 
 router = APIRouter()
 
-# 📌 Summarize file (existing)
+# Summarize file (existing)
 @router.post("/summarize-file")
 async def summarize_file(
     file: UploadFile = File(...), 
@@ -26,7 +26,7 @@ async def summarize_file(
     return {"result": result}
 
 
-# 📌 Chat with Document (new)
+# Chat with Document
 @router.post("/chat-with-file")
 async def chat_with_file(
     file: UploadFile = File(...),

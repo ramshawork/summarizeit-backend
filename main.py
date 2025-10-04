@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routes import ai, files   # ✅ ab backend. lagane ki zarurat nahi
+from routes import ai, files 
 import os
 from dotenv import load_dotenv
 

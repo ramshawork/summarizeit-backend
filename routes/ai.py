@@ -3,7 +3,6 @@ from pydantic import BaseModel
 import os
 from utils.ai_helper import generate_summary_from_text
 
-# ✅ Router define karna zaruri hai
 router = APIRouter()
 
 # Request body model
@@ -13,7 +12,7 @@ class SummarizeRequest(BaseModel):
     mode: str = "summary"   # summary | keypoints | simplify | title | faqs | chat
     language: str = "English"   # (default English)
 
-# ✅ API endpoint
+# API endpoint
 @router.post("/summarize-text")
 async def summarize_text(payload: SummarizeRequest):
     text = payload.text
